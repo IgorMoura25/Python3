@@ -1,4 +1,4 @@
-def jogar()
+def jogar():
 
     print("********************************")
     print("Bem vindo ao jogo de adivinhação")
@@ -11,7 +11,14 @@ def jogar()
 
     #Enquanto não enforcou e não acertou
     while(not enforcou and not acertou):
-        print("Jogando...")
+        
+        chute = input("Qual letra?")
+        chute = chute.strip().lower()
+        index = 0
+        for letra in palavra_secreta:
+            if(chute == letra):
+                print("Encontrei a letra {} na posição {}".format(letra, index))
+            index = index + 1
 
     print("Fim de jogo")
     
